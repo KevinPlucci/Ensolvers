@@ -1,0 +1,17 @@
+body{
+    max-width: 100% !important;
+    overflow-x: hidden;
+}
+
+input {
+    list-style: none;
+    margin-bottom: 5px;
+}
+.title{
+    font-size: 40px;
+}
+a.enlace-eliminar {
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+}

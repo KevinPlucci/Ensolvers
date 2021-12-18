@@ -1,0 +1,25 @@
+# Reescribe las peticiones de URL
+RewriteEngine On
+
+# Seteo el charset en UTF-8
+AddDefaultCharset utf-8
+
+# Bloqueo el listado de directorios
+Options -Indexes
+
+# Bloqueo el acceso al htaccess
+<Files .htaccess>
+	Order allow,deny
+	Deny from all
+</Files>
+
+AddHandler application/x-httpd-php .css
+
+# Si el archivo y la carpeta no existen hace la siguiente reescritura
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !.*\.(ico|gif|jpg|jpeg|png|js|css)
+
+
+# Redirecciona todas las peticiones al index
+RewriteRule ^([a-zA-Z0-9_\-/\.]+)$ index.php? [QSA,L]

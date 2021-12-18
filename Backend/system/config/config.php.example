@@ -1,0 +1,9 @@
+<?php
+/**
+*   Database connection info
+*/
+define("DBHOST","");//Hostname
+define("DBUSER","");//Username
+define("DBPASS","");//Password
+define("DBPORT","");//Port
+define("DBDATABASE","");//Database name

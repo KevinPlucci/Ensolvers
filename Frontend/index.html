@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lista de tareas 2021</title>
+
+	<link rel="stylesheet" href="CSS/main.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+</head>
+<body>
+	
+	<header>
+		<h1 class="title text-center">Lista de tareas 2021</h1>
+	</header>
+	
+	<div class="row justify-content-center">
+		<div class="col-12 col-sm-8 col-md-6 col-xl-4">
+			<div class="card" id="taskContent">
+				<div class="card-body overflow-auto" style="max-height: 75vh;">
+					<div class="row">
+						<div class="col-12">
+							<h4 class="d-none text-center" id="taskNone">Aún no tienes tareas</h4>
+							<ul class="list-group" id="taskList">
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer">
+					<div class="row">
+						<div class="col-12 d-flex justify-content-between">
+							<input id="newTask" name="newTask" type="text" class="form-control" placeholder="Nueva tarea">
+							<button class="btn btn-primary" type="button" onclick="AddTask()">Agregar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Edit section -->
+			<div class="card d-none" id="taskEdit">
+				<div class="card-header text-center">
+					<h4 id="editTitle">Editing Task "<span id="taskToEdit" class="text-info"></span>"</h4>
+				</div>
+				<div class="card-body">
+					<div class="row">
+						<div class="col-12" id="editOptions">
+							<input type="text" class="form-control" id="editInput" name="editInput" placeholder="Write something here...">
+						</div>
+					</div>
+				</div>
+				<div class="card-footer d-flex justify-content-between">
+					<button class="btn btn-primary" type="button" onclick="SaveEditedTask(this)">Save</button>
+					<button class="btn btn-danger" type="button" onclick="CancelEdit()">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+	<script src="JS/query.js"></script>
+	<script src="JS/main.js"></script>
+
+</body>
+</html>
